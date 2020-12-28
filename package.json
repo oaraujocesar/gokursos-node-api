@@ -5,7 +5,13 @@
   "name": "gokursos-node-api",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
   "repository": "git@github.com:oaraujocesar/gokursos-node-api.git",
   "author": "César O. Araújo <oaraujocesar@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
 }
