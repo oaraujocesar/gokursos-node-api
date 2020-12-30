@@ -22,7 +22,12 @@ class UserController {
     
     return response.status(201).json(user);
   }
-  
+
+  async update(request, response) {
+
+    console.log(request.userId)
+    return response.json({ ok: true });
+  }
 }
 
 export default new UserController();
