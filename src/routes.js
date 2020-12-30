@@ -11,6 +11,7 @@ routes.post('/auth', SessionController.store);
 routes.use(authMiddleware);
 
 routes.put('/users', UserController.update);
+routes.delete('/users', UserController.delete);
 
 
 export default routes;

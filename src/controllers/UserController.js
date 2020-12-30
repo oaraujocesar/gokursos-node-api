@@ -52,6 +52,12 @@ class UserController {
 
     return response.status(201).json({ id, name, email, bio, avatar });
   }
+
+  async delete(request, response) {
+    await User.deleteOne({ _id: request.userId });
+
+    return response.status(200).json({ error: 'User deleted successfully.' })
+  }
 }
 
 export default new UserController();
