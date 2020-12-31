@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import cors from 'cors';
 import routes from './routes';
 
 dotenv.config();
@@ -13,6 +14,7 @@ mongoose.connect(
   { useNewUrlParser: true, useUnifiedTopology: true }
 )
 
+server.use(cors());
 server.use(express.json());
 server.use(routes);
 
