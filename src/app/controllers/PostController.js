@@ -23,6 +23,12 @@ class PostController {
 
     return response.status(201).json(post);
   }
+
+  async index(request, response) {
+    const posts = await Post.find();
+
+    return response.status(200).json(posts);
+  }
 };
 
 export default new PostController();
