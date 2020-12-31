@@ -19,6 +19,4 @@ export default async (request, response, next) => {
   } catch (error) {
     return response.status(401).json({ error: 'Token provided is invalid' })
   }
-
-  next();
 };

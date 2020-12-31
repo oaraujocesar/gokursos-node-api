@@ -1,7 +1,7 @@
 import express from 'express';
-import UserController from './controllers/UserController';
-import SessionController from './controllers/SessionController';
-import authMiddleware from './middlewares/authentication';
+import UserController from './app/controllers/UserController';
+import SessionController from './app/controllers/SessionController';
+import authMiddleware from './app/middlewares/authentication';
 
 const routes = express.Router();
 
