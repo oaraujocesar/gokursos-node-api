@@ -26,7 +26,7 @@ class PostController {
 
   async index(request, response) {
     const posts = await Post.find();
-    
+
     return response.status(200).json(posts);
   }
 
@@ -46,6 +46,12 @@ class PostController {
     } catch (error) {
       return response.status(404).json({ error: 'Post not found.' })
     }
+  }
+
+  async delete(request, response) {
+    await Post.findOneAndDelete({ _id: request.params.post_id });
+
+    return response.status(200).json({ message: 'Post deleted successfully' });
   }
 };
 
