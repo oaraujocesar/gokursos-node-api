@@ -15,6 +15,7 @@ routes.put('/users', UserController.update);
 routes.delete('/users', UserController.delete);
 routes.post('/posts', PostController.store);
 routes.get('/posts', PostController.index);
+routes.get('/posts/:id', PostController.indexAll);
 
 
 export default routes;

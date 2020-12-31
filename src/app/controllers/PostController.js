@@ -29,6 +29,12 @@ class PostController {
 
     return response.status(200).json(posts);
   }
+
+  async indexAll(request, response) {
+    const posts = await Post.find({ user: request.params.id });
+
+    return response.status(200).json(posts);
+  }
 };
 
 export default new PostController();
